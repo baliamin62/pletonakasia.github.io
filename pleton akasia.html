@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Akasia</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background: #333;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    nav a:hover {
+      color: yellow;
+    }
+    .content {
+      display: none; /* awalnya semua disembunyikan */
+      padding: 20px;
+      text-align: center;
+    }
+    .active {
+      display: block; /* hanya yang dipilih ditampilkan */
+    }
+    img {
+      max-width: 300px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align:center; background:brown; color:white; padding:20px;">
+    AKASIA
+  </h1>
+
+  <nav>
+    <a onclick="showPage('beranda')">Beranda</a>
+    <a onclick="showPage('tentang')">Tentang</a>
+    <a onclick="showPage('kontak')">Kontak</a>
+    <a onclick="showPage('foto')">Foto</a>
+  </nav>
+
+  <!-- Konten Beranda -->
+  <div id="beranda" class="content active">
+    <h2>Ucapan terima kasih </h2>
+    <h2>for you kak zora</h2>
+    <p>Halo selamat datang kak zoraaa</p>
+    <img src="akasia 1.jpg" alt="Foto Beranda">
+  </div>
+  
+  <!-- Konten Foto -->
+<div id="foto" class="content">
+  <img src="akasia 6.jpeg" alt ="Foto Foto">
+  <img src="akasia 7.jpg" alt ="Foto Foto">
+  <img src="akasia 8.jpg" alt ="Foto Foto">
+  <img src="akasia 9.jpg" alt ="Foto Foto">
+  <img src="akasia 10.jpg" alt="Foto Foto">
+  <img src="akasia 11.jpg" alt="Foto Foto">
+  <img src="akasia 12.jpg" alt="Foto Foto">
+  </div>
+  
+  <!-- Konten Tentang -->
+  <div id="tentang" class="content">
+    <h2>Tentang Kami</h2>
+    <p>haloo kak makasii yaa dukungannya selama PKKMB POLBENG 2025 kami sangat sangat berterimakasih sama kakak, kakak tidak pernah marah sama kami, tidak pernah bentak kamii, kami beruntung dapet bindam kayak kakak, makasiii yaa kak sekali lagiiii</p>
+    <img src="akasia 2.jpg" alt="Foto Tentang">
+    <br>
+    <img src="akasia 3.jpg" alt =Foto Tentang">
+    <img src="akasia 4.jpg" alt =Foto Tentang">
+    <img src="akasia 5.jpg" alt =Foto Tentang">
+    
+  </div>
+
+  <!-- Konten Kontak -->
+  <div id="kontak" class="content">
+    <h2>Kontak</h2>
+    <p>Mau lihat IG kak zora? di bawah ini yaaa</p>
+    <a href=https://www.instagram.com/zora.anndyaa?igsh=ZW5uZnp5YjYzYWU0>link<a/>
+    <p>atau mau lihat IG nya akasia? bolehhh di bawah yaaa</p>
+    <a href=https://www.instagram.com/akasia_bersemi25?igsh=aG5ocTg3cmo5cmpo>link<a/>
+    <footer>
+    <p>&copy;PKKMB 2025<p/>
+    <footer\>
+  </div>
+
+  <script>
+    function showPage(pageId) {
+      // sembunyikan semua
+      let pages = document.querySelectorAll('.content');
+      pages.forEach(page => page.classList.remove('active'));
+
+      // tampilkan sesuai klik
+      document.getElementById(pageId).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
